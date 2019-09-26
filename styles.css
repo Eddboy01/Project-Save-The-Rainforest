@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    line-height: 1.6;
+
+}
+
+nav{
+    text-align: center;
+    position: absolute;
+    z-index: 1; 
+    padding: 15px;     
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+nav table td{
+    margin: 10px 0;
+    border: 2px solid #fff;
+    padding: 13px 15px;
+    border-radius: 100%; 
+    
+}
+nav table td:hover{
+
+    background-color: rgb(70, 248, 85);
+}
+.slider{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.slider nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.slide.current{
+    opacity: 1;
+}
+.slide .content{
+    position: absolute;
+    /* bottom: 70px;
+    left: -600px; */
+    max-width: 600px;
+    opacity: 0;
+    background-color: rgba(70, 248, 85, 0.8);
+    color: #333;
+    padding: 35px;
+    border-radius: 5px;
+
+
+}
+.slide .center .mission-box{
+    
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.slide .top{
+    top: -600px;
+    right: 30px;
+    background-color: rgba(9, 252, 199,0.8);
+}
+.slide .bottom-left{
+    bottom: 70px;
+    left: -600px;  
+}
+@media(max-width: 520px){
+    .slide .bottom-left{
+        max-width: 80%;
+    }
+}
+.slide .center{
+    bottom: -600px;
+    left: 45%;
+    background-color: rgba(44, 44, 44, 0.8);
+    color: #fff;
+    
+    
+}
+@media(max-width: 520px){
+    .slide .center{
+        left: 0;
+        max-width: 100%;
+    }
+}
+button#next{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+button#prev{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+.buttons button{
+    border: 2px solid#fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;  
+}
+.buttons button:hover{
+    background-color: #fff;
+    color: #333;
+}
+.slide .content h1{
+    margin-bottom: 10px;
+}
+.slide.current .bottom-left{
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+.slide.current .top{
+    opacity: 1;
+    transform: translateY(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+.slide.current .center{
+    opacity: 1;
+    transform: translateY(-625px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+
+.slide:first-child{
+    background: url('/images/forest-light-nature-70365.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(2){
+    background: url('/images/background-branch-bright-243109.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(3){
+    background: url('/images/animal-animal-photography-ape-2679743.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(4){
+    background: url('/images/aerial-shot-beautiful-cloud-2887781.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(5){
+    background: url('/images/close-up-dew-first-rain-52851.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(6){
+    background: url('/images/animals-antenna-blurred-background-2888582.jpg') no-repeat center center/cover;
+}
